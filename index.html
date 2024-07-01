@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur Solavie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="titrepage">Calculateur Solavie</h1>
+    <div id="app">
+
+        <div class="gauche">
+        <form id="railForm" class="form">
+            <h2>Calcul nombre de rail</h2>
+            <label for="numPanneaux">Nombre de panneaux :</label>
+            <input type="number" id="numPanneaux" required>
+            <button type="button" onclick="calculerRails()">Calculer</button>
+        </form>
+        <div id="resultLandscape"></div>
+        <div id="resultPortrait"></div>
+        
+        <form id="crochetForm" class="form">
+            <h2>Calcul nombre de crochet</h2>
+            <label for="numRails">Nombre de rails :</label>
+            <input type="number" id="numRails" required>
+            <button type="button" onclick="calculerCrochets()">Calculer</button>
+        </form>
+        <div id="resultCrochets"></div>
+
+        <form id="clameForm" class="form">
+            <h2>Calcul des clames</h2>
+            <label for="numLignes">Nombre de lignes :</label>
+            <input type="number" id="numLignes" required>
+            <label for="panneauxParLigne">Panneaux par ligne (séparés par des virgules) :</label>
+            <input type="text" id="panneauxParLigne" placeholder="Ex: 5,5,2" required>
+            <button type="button" onclick="calculerClames()">Calculer</button>
+        </form>
+        <div id="resultClamesFin"></div>
+        <div id="resultClamesMilieu"></div>
+        </div>
+
+        <div class="droite">
+        <form id="minPanelForm" class="form">
+            <h2>Calcul du nombre minimum de panneaux</h2>
+            <label for="mppVoltageBas">Onduleur : MPP Voltage bas :</label>
+            <input type="number" id="mppVoltageBas" required>
+            <label for="panneauVmp">Panneau : Vmp :</label>
+            <input type="number" id="panneauVmp" required>
+            <button type="button" onclick="calculerMinPanneaux()">Calculer</button>
+        </form>
+        <div id="resultMinPanneaux"></div>
+
+        <form id="maxPanelForm" class="form">
+            <h2>Calcul du nombre maximum de panneaux</h2>
+            <label for="maxInputVoltage">Onduleur : Max input voltage :</label>
+            <input type="number" id="maxInputVoltage" required>
+            <label for="panneauVoc">Panneau : Voc :</label>
+            <input type="number" id="panneauVoc" required>
+            <button type="button" onclick="calculerMaxPanneaux()">Calculer</button>
+        </form>
+        <div id="resultMaxPanneaux"></div>
+
+        <form id="checkPanelForm" class="form">
+            <h2>Vérification du nombre maximum de panneaux</h2>
+            <label for="maxStringSize">Max string size :</label>
+            <input type="number" id="maxStringSize" required>
+            <label for="checkPanneauVmp">Panneau : Vmp :</label>
+            <input type="number" id="checkPanneauVmp" required>
+            <button type="button" onclick="verifierMaxPanneaux()">Vérifier</button>
+        </form>
+        <div id="resultCheckPanneaux"></div>
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
