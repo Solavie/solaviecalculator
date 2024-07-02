@@ -25,6 +25,8 @@ label {
     width: 500px;
     height: 100%;
     padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }
 
 form {
@@ -42,7 +44,6 @@ input, button {
     font-size: 12px;
 }
 
-#resultLandscape, #resultPortrait, #resultatCrochets {
-    margin-top: 10px;
+#resultLandscape,#resultPortrait,#resultCrochets,#resultClamesFin,#resultClamesMilieu,#resultMinPanneaux,#resultMaxPanneaux,#resultCheckPanneaux {
     font-size: 14px;
 }

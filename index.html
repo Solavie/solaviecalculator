@@ -43,9 +43,9 @@
         <div class="droite">
         <form id="minPanelForm" class="form">
             <h2>Calcul du nombre minimum de panneaux</h2>
-            <label for="mppVoltageBas">Onduleur : MPP Voltage bas :</label>
+            <label for="mppVoltageBas"><b>Onduleur</b> : MPP Voltage bas :</label>
             <input type="number" id="mppVoltageBas" required>
-            <label for="panneauVmp">Panneau : Vmp :</label>
+            <label for="panneauVmp"><b>Panneau</b>: Vmp :</label>
             <input type="number" id="panneauVmp" required>
             <button type="button" onclick="calculerMinPanneaux()">Calculer</button>
         </form>
@@ -53,9 +53,9 @@
 
         <form id="maxPanelForm" class="form">
             <h2>Calcul du nombre maximum de panneaux</h2>
-            <label for="maxInputVoltage">Onduleur : Max input voltage :</label>
+            <label for="maxInputVoltage"><b>Onduleur</b> : Max input voltage :</label>
             <input type="number" id="maxInputVoltage" required>
-            <label for="panneauVoc">Panneau : Voc :</label>
+            <label for="panneauVoc"><b>Panneau</b>: Voc :</label>
             <input type="number" id="panneauVoc" required>
             <button type="button" onclick="calculerMaxPanneaux()">Calculer</button>
         </form>
@@ -63,9 +63,9 @@
 
         <form id="checkPanelForm" class="form">
             <h2>Vérification du nombre maximum de panneaux</h2>
-            <label for="maxStringSize">Max string size :</label>
+            <label for="maxStringSize"> Max panneau par string :</label>
             <input type="number" id="maxStringSize" required>
-            <label for="checkPanneauVmp">Panneau : Vmp :</label>
+            <label for="checkPanneauVmp"><b>Panneau</b>: Vmp :</label>
             <input type="number" id="checkPanneauVmp" required>
             <button type="button" onclick="verifierMaxPanneaux()">Vérifier</button>
         </form>
