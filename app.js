@@ -1,14 +1,21 @@
 function calculerRails() {
+    const landscapeSize = parseFloat(document.getElementById('landscapeSize').value);
+    const portraitSize = parseFloat(document.getElementById('portraitSize').value);
     const numPanneaux = parseFloat(document.getElementById('numPanneaux').value);
-    if (isNaN(numPanneaux)) {
-        alert("Veuillez entrer un nombre valide de panneaux.");
+
+    if (isNaN(landscapeSize) || isNaN(portraitSize) || isNaN(numPanneaux)) {
+        alert("Veuillez entrer des valeurs valides pour les tailles de panneau et le nombre de panneaux.");
         return;
     }
-    const resultLandscape = Math.ceil(((numPanneaux * 1.74) / 6) * 2);
-    const resultPortrait = Math.ceil(((numPanneaux * 1.15) / 6) * 2);
+
+    // Calculer en utilisant les tailles spécifiques pour paysage et portrait
+    const resultLandscape = Math.ceil(((numPanneaux * landscapeSize) / 6) * 2);
+    const resultPortrait = Math.ceil(((numPanneaux * portraitSize) / 6) * 2);
+
     document.getElementById('resultLandscape').innerText = `Placement paysage = ${resultLandscape} rails`;
     document.getElementById('resultPortrait').innerText = `Placement portrait = ${resultPortrait} rails`;
 }
+
 
 function calculerCrochets() {
     const numRails = parseFloat(document.getElementById('numRails').value);
