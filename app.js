@@ -9,8 +9,8 @@ function calculerRails() {
     }
 
     // Calculer en utilisant les tailles spécifiques pour paysage et portrait
-    const resultLandscape = Math.ceil(((numPanneaux * landscapeSize) / 2) * 6);
-    const resultPortrait = Math.ceil(((numPanneaux * portraitSize) / 2) * 6);
+    const resultLandscape = Math.ceil(((numPanneaux * landscapeSize) * 2) / 6);
+    const resultPortrait = Math.ceil(((numPanneaux * portraitSize) * 2) / 6);
 
     document.getElementById('resultLandscape').innerText = `Placement paysage = ${resultLandscape} rails`;
     document.getElementById('resultPortrait').innerText = `Placement portrait = ${resultPortrait} rails`;
